@@ -1,0 +1,65 @@
+﻿@page
+@model WebAssignment.Pages.Admin.Author.CreateAuthorModel
+@{
+}
+<style>
+    div {
+        margin-bottom: 2px;
+    }
+
+    label {
+        display: block;
+        float: left;
+        width: 200px;
+    }
+</style>
+
+<form method="post">
+    <div>
+        <label asp-for="Author.Fname"></label>
+        <input asp-for="Author.Fname" />
+        <span asp-validation-for="Author.Fname"></span>
+    </div>
+    <div>
+        <label asp-for="Author.Lname"></label>
+        <input asp-for="Author.Lname" />
+        <span asp-validation-for="Author.Lname"></span>
+    </div>
+    <div>
+        <label asp-for="Author.Email"></label>
+        <input asp-for="Author.Email" />
+        <span asp-validation-for="Author.Email"></span>
+    </div>
+    <div>
+        <label asp-for="Author.Bday"></label>
+        <input asp-for="Author.Bday" type="date" />
+        <span asp-validation-for="Author.Bday"></span>
+    </div>
+    <div>
+        <label asp-for="Author.Website"></label>
+        <input asp-for="Author.Website" />
+        <span asp-validation-for="Author.Website"></span>
+    </div>
+    <div>
+        <label asp-for="Author.Phone"></label>
+        <input asp-for="Author.Phone" />
+        <span asp-validation-for="Author.Phone"></span>
+    </div>
+    <div>
+        <label asp-for="Author.Province"></label>
+        <input asp-for="Author.Province" />
+        <span asp-validation-for="Author.Province"></span>
+    </div>
+    <div>
+        <label asp-for="Author.Country"></label>
+        <input asp-for="Author.Country" />
+        <span asp-validation-for="Author.Country"></span>
+    </div>
+    <div>
+        <label asp-for="Author.Zip"></label>
+        <input asp-for="Author.Zip" />
+        <span asp-validation-for="Author.Zip"></span>
+    </div>
+    <input type="submit" value="Submit" class="form-submit-button"/>
+    
+</form>

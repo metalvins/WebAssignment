@@ -1,0 +1,41 @@
+﻿@page
+@model WebAssignment.Pages.Admin.Blog.CreateBlogModel
+@{
+}
+
+<style>
+    div {
+        margin-bottom: 2px;
+    }
+
+    label {
+        display: block;
+        float: left;
+        width: 200px;
+    }
+</style>
+
+<form method="post">
+    <div>
+        <label asp-for="Blog.Title"></label>
+        <input asp-for="Blog.Title" />
+        <span asp-validation-for="Blog.Title"></span>
+    </div>
+    <div>
+        <label asp-for="Blog.Content"></label>
+        <textarea asp-for="Blog.Content" class="content-box"></textarea>
+        <span asp-validation-for="Blog.Content"></span>
+    </div>
+    <div>
+        <label asp-for="Blog.Date"></label>
+        <input asp-for="Blog.Date" type="date" />
+        <span asp-validation-for="Blog.Date"></span>
+    </div>
+    <div>
+        <label asp-for="Blog.Author"></label>
+        <select asp-for="Blog.Author" asp-items="Model.AuthorList"></select>
+        <span asp-validation-for="Blog.Author"></span>
+    </div>
+    <input type="submit" value="Submit" class="form-submit-button" />
+
+</form>

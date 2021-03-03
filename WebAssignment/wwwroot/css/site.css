@@ -12,6 +12,28 @@ a {
   color: #0366d6;
 }
 
+.content-box {
+    padding: 0 0 200px 0;
+    width: 400px;
+}
+
+.form-submit-button {
+    position: relative;
+    top: 30px;
+    width: 120px;
+    height: 40px;
+    background: #70C4DB;
+    color: #fff;
+    border: 1px solid #eee;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #eee;
+    text-shadow: none;
+}
+
+.form-submit-button:hover {
+    background: #016ABC;
+}
+
 .btn-primary {
   color: #fff;
   background-color: #1b6ec2;
