@@ -5,6 +5,9 @@ namespace WebAssignment.Models
 {
     public class Blog
     {
+        [Key]
+        public int BlogID { get; set; }
+
         [MaxLength(200)]
         public string Title { get; set; }
 

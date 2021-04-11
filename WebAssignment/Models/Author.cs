@@ -1,10 +1,16 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace WebAssignment.Models
 {
     public class Author
     {
+        [Key]
+        public int AuthorID { get; set }
+
+        public ICollection<Models.Blog> Blogs;
+
         [Required(ErrorMessage = "Please provide your first name.")]
         [MaxLength(200)]
         [Display(Name = "First Name")]
