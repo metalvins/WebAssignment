@@ -1,0 +1,9 @@
+﻿{
+  "name": "VineshBlog",
+  "short_name": "Blog",
+  "description": "This is a blog website by Vinesh",
+  "start_url": "/",
+  "display": "minimal-ui",
+  "orientation": "natural",
+  "screenshots": []
+}
