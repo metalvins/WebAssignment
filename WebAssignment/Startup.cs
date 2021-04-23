@@ -10,7 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using WebAssignment.Context;
-
+using Microsoft.Data.Sqlite;
 
 namespace WebAssignment
 {
@@ -30,7 +30,11 @@ namespace WebAssignment
 
             services.AddDbContext<DataContext>(options =>
             {
-                options.UseSqlServer(Configuration.GetConnectionString("DataConnection"));
+                var connectionStringBuilder = new SqliteConnectionStringBuilder { DataSource = "MyDb.db" };
+                var connectionString = connectionStringBuilder.ToString();
+                var connection = new SqliteConnection(connectionString);
+                //options.UseSqlServer(Configuration.GetConnectionString("DataConnection"));
+                options.UseSqlite(connection);
             });
         }
 

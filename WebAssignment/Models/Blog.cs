@@ -15,7 +15,7 @@ namespace WebAssignment.Models
         public string Content { get; set; }
 
         [Display(Name = "Publish Date")]
-        public DateTime Date { get; set; }
+        public DateTime Date { get; set; } = DateTime.Now;
 
         public Author Author { get; set; }
     }

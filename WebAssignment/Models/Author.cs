@@ -7,7 +7,7 @@ namespace WebAssignment.Models
     public class Author
     {
         [Key]
-        public int AuthorID { get; set }
+        public int AuthorID { get; set; }
 
         public ICollection<Models.Blog> Blogs;
 
@@ -22,7 +22,7 @@ namespace WebAssignment.Models
         public string Lname { get; set; }
 
         [Display(Name = "Date of Birth")]
-        public DateTime Bday { get; set; }
+        public DateTime Bday { get; set; } = DateTime.Now;
 
         [EmailAddress]
         [Display(Name = "Email Address")]
